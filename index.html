@@ -59,7 +59,7 @@
         // alert('Pick up')
         console.log(score.value);
         if (score.value == "") {
-          alert("enter a value");
+            showResult.innerHTML = "Enter a Value.";
         }else if (score.value >= 0 && score.value <= 39) {
           console.log("F- Fail");
           showResult.innerHTML = "F-FAIL";
