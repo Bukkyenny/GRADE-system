@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOVE</title>
+</head>
+<style>
+body{
+    box-sizing: border-box;
+    overflow: hidden;
+
+}
+.one{
+    margin-left: 100px;
+    margin-top: 20px;
+}
+.two{
+    margin-top: 50px;
+}
+</style>
+<body>
+    <div>
+       
+         <div style="background-color: antiquewhite; width: 700px; height: 500px; margin-left: 280px; margin-top: 50px;"></div>
+         <div style=" width: 500px; height: 400px; margin-left: 380px; margin-top: -450px; background-color: aliceblue;">
+            <h1 class="one">GRADE CHECKER</h1>
+           
+            <input type="number" placeholder="write here" id="score" class="one">
+            <button onclick="checkScore()" class="two">Moment of truth</button>
+            <div id="showResult" style="margin-left: 180PX; margin-top: 150PX;"><BUtton style="width: 150PX; height: 50PX;">HERE</BUtton></div>
+        
+         
+        </div>
+       
+
+    </div>
+
+
+    <script>
+        var song = new Audio('music/Handing-over.mp3');
+        var one = new Audio('music/champion.mp3');
+        var two = new Audio('music/Otilor.mp3');
+        var three = new Audio('music/Uyo-meyo.mp3');
+        
+       console.log(showResult.innerHTML);
+       function checkScore() {
+           // alert('Pick up')
+       console.log(score.value);
+
+       if(score.value>= 0 && score.value <= 39){
+       console.log('F- Fail');
+       showResult.innerHTML = 'F-FAIL'
+       two.play();
+   }else if (score.value>= 40 && score.value <= 45){
+       console.log('E-Pass');
+       showResult.innerHTML = 'E-PASS'
+       song.play()
+   }else if (score.value>= 46 && score.value <= 49){
+       console.log('D7-Pass');
+       showResult.innerHTML = 'D7-PASS'
+       song.play()
+   }else if (score.value>= 50 && score.value <= 54){
+       console.log('C6-Credit');
+       showResult.innerHTML = 'C6-CREDIT'
+       three.play()
+   }else if (score.value>= 55 && score.value <= 59){
+       console.log('C5-Credit');
+       showResult.innerHTML = 'C5-CREDIT'
+       three.play()
+   }else if (score.value>= 60 && score.value <= 64){
+       console.log('C4-Credit');
+       showResult.innerHTML = 'C4-CREDIT'
+       three.play()
+   }else if (score.value>= 65 && score.value <= 69){
+       console.log('B3-Good');
+       showResult.innerHTML = 'B3-GOOD'
+       one.play()
+   }else if (score.value>= 70 && score.value <= 74){
+       console.log('B2-V.good');
+       showResult.innerHTML = 'B2-V.GOOD'
+       one.play()
+   }else if(score.value>= 75 && score.value <= 100){
+       console.log('A1-Excellent');
+       showResult.innerHTML = 'A1-EXCELLENT'
+       one.play()
+   }else {
+       console.log('input a correct score.value')
+   }
+
+
+       }
+
+   </script>
+</body>
+</html>
