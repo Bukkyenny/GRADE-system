@@ -52,38 +52,65 @@ body{
        console.log('F- Fail');
        showResult.innerHTML = 'F-FAIL'
        two.play();
+       three.pause();
+       one.pause();
+       song.pause();
    }else if (score.value>= 40 && score.value <= 45){
        console.log('E-Pass');
        showResult.innerHTML = 'E-PASS'
-       song.play()
+       song.play();
+       three.pause();
+       one.pause();
+       two.pause();
    }else if (score.value>= 46 && score.value <= 49){
        console.log('D7-Pass');
        showResult.innerHTML = 'D7-PASS'
-       song.play()
+       song.play();
+       three.pause();
+       one.pause();
+       two.pause();
    }else if (score.value>= 50 && score.value <= 54){
        console.log('C6-Credit');
        showResult.innerHTML = 'C6-CREDIT'
-       three.play()
+       three.play();
+       song.pause();
+       one.pause();
+       two.pause();
    }else if (score.value>= 55 && score.value <= 59){
        console.log('C5-Credit');
        showResult.innerHTML = 'C5-CREDIT'
        three.play()
+       song.pause();
+       one.pause();
+       two.pause();
    }else if (score.value>= 60 && score.value <= 64){
        console.log('C4-Credit');
        showResult.innerHTML = 'C4-CREDIT'
        three.play()
+       song.pause();
+       one.pause();
+       two.pause();
    }else if (score.value>= 65 && score.value <= 69){
        console.log('B3-Good');
        showResult.innerHTML = 'B3-GOOD'
        one.play()
+       three.pause();
+       song.pause();
+       two.pause();
    }else if (score.value>= 70 && score.value <= 74){
        console.log('B2-V.good');
        showResult.innerHTML = 'B2-V.GOOD'
-       one.play()
+       one.play();
+       three.pause();
+       song.pause();
+       two.pause();
    }else if(score.value>= 75 && score.value <= 100){
        console.log('A1-Excellent');
        showResult.innerHTML = 'A1-EXCELLENT'
-       one.play()
+       one.play();
+       three.pause();
+      song.pause();
+       two.pause();
    }else {
        console.log('input a correct score.value')
    }
